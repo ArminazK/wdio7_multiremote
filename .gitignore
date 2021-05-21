@@ -1,0 +1,7 @@
+node_modules
+.idea/.gitignore
+.idea/modules.xml
+.idea/raw_wdio7.iml
+.idea/vcs.xml
+test/.DS_Store
+.DS_Store
