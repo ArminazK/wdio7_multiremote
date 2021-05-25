@@ -1,14 +1,13 @@
 import BrowserObject = WebdriverIO.Browser;
-import MultiRemoteBrowserObject = WebdriverIO.MultiRemoteBrowser;
 
-export class DriverFactory {
-    private readonly _browser: BrowserObject| MultiRemoteBrowserObject | undefined ;
+export class DriverFactory<T = BrowserObject> {
+    private readonly _browser: T | undefined;
 
-    constructor(browser?: BrowserObject | MultiRemoteBrowserObject) {
-        this._browser = browser;
+    constructor(myBrowser?: T) {
+        this._browser = myBrowser;
     }
 
-    get browser(): BrowserObject | MultiRemoteBrowserObject {
+    get browser(): T | BrowserObject {
         return this._browser || browser;
     }
 }

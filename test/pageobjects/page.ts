@@ -10,7 +10,6 @@ export class Page extends DriverFactory{
     * @param path path of the sub page (e.g. /path/to/page.html)
     */
     open (path: string) {
-        // @ts-ignore
         return this.browser.url(`https://the-internet.herokuapp.com/${path}`)
     }
 }
